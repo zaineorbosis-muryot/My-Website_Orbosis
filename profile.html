@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yvrielle</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+    position: relative;
+    background-image: url('zee.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::before,
+body::after{
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: -1;
+}
+
+body::before{
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: -10%;
+    animation: moveGlass1 18s linear infinite alternate;
+}
+
+body::after{
+    width: 180px;
+    height: 180px;
+    bottom: 10%;
+    right: -8%;
+    animation: moveGlass2 15s linear infinite alternate;
+}
+
+.glass{
+    position: fixed;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    top: 55%;
+    left: 20%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    z-index: -1;
+    animation: moveGlass3 20s linear infinite alternate;
+}
+
+@keyframes moveGlass1{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(900px,300px); }
+}
+
+@keyframes moveGlass2{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(-800px,-250px); }
+}
+
+@keyframes moveGlass3{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(700px,-300px); }
+}
+
+header{
+    background-color: #F4F239;
+    line-height: 1.6;
+    height: 12vh;
+    box-shadow: 3px 10px 15px rgba(0,0,0,0.1);
+}
+
+.ew{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.waes{
+    font-size: 1rem;
+    border: 3px solid black;
+    padding: 20px;
+    width: 600px;
+    margin: 30px auto;
+    background-color: rgba(255,255,220,0.5);
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    text-align: center;
+    max-width: 90%;
+    transition: 0.4s;
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-box{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: 150px;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.skill-box img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+footer{
+    background-image: linear-gradient(to bottom, lightpink, mediumpurple);
+    font-size: small;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.main-content{
+    flex: 1;
+    margin-top: 17vh;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    height: 100%;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+input, textarea{
+    width: 90%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    background-color: mediumpurple;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="glass"></div>
+
+<header>
+<ul>
+<li><a href="index.html">MY PORTFOLIO</a></li>
+<li><a href="index.html"><img src="ew.png" class="ew"></a></li>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about me.html">ABOUTME</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="profile.html">PROFILE</a></li>
+</ul>
+</header>
+
+<div class="main-content">
+
+<div class="waes">
+<img src="ew.png" class="profile-img">
+<p>
+<span style="color: hotpink;">Yvrielle Jozaine Orbosis</span><br><br>
+A passionate and dedicated individual who strives to improve skills and grow professionally. 
+I am interested in learning new technologies, building creative projects and continuously developing myself.
+</p>
+</div>
+
+<div class="waes">
+<strong>Skills</strong><br><br>
+<div class="skills">
+
+<div class="skill-box">
+<img src="Com.jpg">
+<h5><u><b>Effective Communication</b></u></h5>
+<p>The ability to clearly express my thoughts and understand others.</p>
+</div>
+
+<div class="skill-box">
+<img src="Note.jpg">
+<h5><u><b>Note-taking and Summarizing</b></u></h5>
+<p>Writing down important points and shortening information so it’s easier to understand.</p>
+</div>
+
+<div class="skill-box">
+<img src="discipline.jpg">
+<h5><u><b>Self-discipline</b></u></h5>
+<p>The ability to control myself and stay focused on what I need to do.</p>
+</div>
+
+<div class="skill-box">
+<img src="Crit.jpg">
+<h5><u><b>Critical Thinking</b></u></h5>
+<p>The ability to think carefully and make good decisions based on facts and logic.</p>
+</div>
+
+<div class="skill-box">
+<img src="CleanD.jpg">
+<h5><u><b>Cleanliness Habits</b></u></h5>
+<p>Regularly keeping myself and my surroundings clean and tidy.</p>
+</div>
+
+</div>
+</div>
+
+<div class="waes">
+<strong>Contact Me!</strong><br><br>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+</div>
+
+</div>
+
+<footer>
+<p>Developed by: ORBOSIS, YVRIELLE JOZAINE</p>
+<p>BSIT 2B</p>
+<p>All Rights Reserved 2026</p>
+</footer>
+
+</body>
+</html>

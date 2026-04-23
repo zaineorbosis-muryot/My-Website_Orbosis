@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yvrielle</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+    position: relative;
+    background-image: url('zee.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::before,
+body::after{
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: -1;
+}
+
+body::before{
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: -10%;
+    animation: moveGlass1 18s linear infinite alternate;
+}
+
+body::after{
+    width: 180px;
+    height: 180px;
+    bottom: 10%;
+    right: -8%;
+    animation: moveGlass2 15s linear infinite alternate;
+}
+
+.glass{
+    position: fixed;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    top: 55%;
+    left: 20%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    z-index: -1;
+    animation: moveGlass3 20s linear infinite alternate;
+}
+
+@keyframes moveGlass1{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(900px,300px); }
+}
+
+@keyframes moveGlass2{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(-800px,-250px); }
+}
+
+@keyframes moveGlass3{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(700px,-300px); }
+}
+
+header{
+    background-color: #F4F239;
+    line-height: 1.6;
+    height: 12vh;
+    box-shadow: 3px 10px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.1);
+    color: darkred;
+}
+
+.ew{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.waes{
+    font-size: 1rem;
+    border: 3px solid black;
+    padding: 20px;
+    width: 600px;
+    margin: 40px auto;
+    background-color: rgba(255,255,220,0.5);
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    text-align: center;
+    max-width: 90%;
+    transition: 0.4s;
+}
+
+.v33nus{
+    text-align: center;
+}
+
+footer{
+    background-image: linear-gradient(to bottom, lightpink, mediumpurple);
+    font-size: small;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    color: black;
+    margin-top: auto;
+}
+
+.waes:hover{
+    background-color: lightpink;
+    animation: v33 2.5s;
+}
+
+@keyframes v33{
+    from{ background-color: lightpink; }
+    to{ background: mediumpurple; }
+}
+
+.main-content{
+    flex: 1;
+    margin-top: 17vh;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    height: 100%;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+input, select, textarea{
+    width: 90%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+button{
+    padding: 10px 25px;
+    border: none;
+    background-color: mediumpurple;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: purple;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="glass"></div>
+
+<header>
+<ul>
+<li><a href="index.html">MY PORTFOLIO</a></li>
+<li><a href="index.html"><img src="ew.png" class="ew"></a></li>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about me.html">ABOUTME</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="profile.html">PROFILE</a></li>
+</ul>
+</header>
+
+<div class="main-content">
+
+<p class="waes">
+Feel free to contact me for any professional inquiries, collaborations or opportunities.
+<br><br>
+<strong>Name:</strong> <span style="color: hotpink;">Yvrielle Jozaine Orbosis</span><br>
+<strong>Email:</strong> yvrielle@gmail.com<br>
+<strong>Phone:</strong> +63 945 765 9876<br>
+<strong>Location:</strong> Philippines
+</p>
+
+<div class="waes">
+
+<strong>Contact Form</strong><br><br>
+
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Phone Number">
+<select required>
+<option value="">Select Subject</option>
+<option>General Inquiry</option>
+<option>Job Opportunity</option>
+<option>Collaboration</option>
+<option>Other</option>
+</select>
+<input type="text" placeholder="Subject Title" required>
+<textarea placeholder="Your Message" required></textarea>
+<input type="text" placeholder="Company / Organization (Optional)">
+<select>
+<option value="">Preferred Contact Method</option>
+<option>Email</option>
+<option>Phone</option>
+</select>
+<input type="date">
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+
+<p class="v33nus">
+<i>"Communication builds connection and opens opportunities."</i>
+</p>
+
+</div>
+
+<footer>
+<p>Developed by: ORBOSIS, YVRIELLE JOZAINE</p>
+<p>BSIT 2B</p>
+<p>All Rights Reserved 2026</p>
+</footer>
+
+</body>
+</html>
